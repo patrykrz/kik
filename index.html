@@ -1,6 +1,12 @@
 <html>
 <head><title>Kolko i Krzyzyk</title>
-  <script src="jquery-1.11.2.min.js"/>
+<link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+  <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
 </head>
 <body>
   <h1>Turbo Gra</h1>
@@ -11,21 +17,42 @@
             <col width="33%" />
             <tbody>
                 <tr>
-                    <td>x</td>
-                    <td>o</td>
-                    <td>x</td>
+                    <td class="tap">x</td>
+                    <td class="tap">o</td>
+                    <td class="tap">x</td>
                 </tr>
                 <tr>
-                    <td>o</td>
-                    <td>x</td>
-                    <td>o</td>
+              
+                    <td class="tap">x</td>
+                    <td class="tap">o</td>
+                    <td class="tap">x</td>
                 </tr>
                 <tr>
-                    <td>o</td>
-                    <td>x</td>
-                    <td>o</td>
+                    <td class="tap">x</td>
+                    <td class="tap">o</td>
+                    <td class="tap">x</td>
                 </tr>
             </tbody>
         </table>
+        
+        <script>
+
+$(function(){
+
+  $( "td.tap" ).bind( "tap", tapHandler );
+
+ 
+
+  function tapHandler( event ){
+
+    $( event.target ).addClass( "tap" );
+
+  }
+
+});
+
+</script>
+
+
 </body>
 </html>
